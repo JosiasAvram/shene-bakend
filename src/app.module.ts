@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { TasksModule } from './tasks/tasks.module';
+import { LoginModule } from './login/login.module';
 
 @Module({
-  imports: [TasksModule],
+  imports: [LoginModule],
   controllers: [],
   providers: [],
 })
