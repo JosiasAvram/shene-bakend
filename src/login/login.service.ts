@@ -10,16 +10,19 @@ export class LoginService {
       id: v4(),
       loginUser: 'josias',
       password: '35531716',
+      rol: 'admin',
     },
     {
       id: v4(),
       loginUser: 'jose',
       password: '123',
+      rol: 'cliente',
     },
     {
       id: v4(),
       loginUser: 'charles',
       password: '321',
+      rol: 'vendedor',
     },
   ];
 
@@ -27,11 +30,12 @@ export class LoginService {
     return this.users;
   }
 
-  createUsers(loginUser: string, password: string) {
+  createUsers(loginUser: string, password: string, rol: string) {
     const user = {
       id: v4(),
       loginUser,
       password,
+      rol,
     };
     this.users.push(user);
 

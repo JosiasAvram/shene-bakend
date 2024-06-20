@@ -21,7 +21,11 @@ export class LoginController {
 
   @Post()
   createUsers(@Body() newUser: CreateUserDto) {
-    return this.loginServices.createUsers(newUser.loginUser, newUser.password);
+    return this.loginServices.createUsers(
+      newUser.loginUser,
+      newUser.password,
+      newUser.rol,
+    );
   }
 
   @Delete(':id')

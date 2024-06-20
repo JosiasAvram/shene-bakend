@@ -1,6 +1,6 @@
-export class Stock {
+export class StockCongelados {
   id: string;
   productName: string;
-  unitsFresh: number;
+  unitsFroozen: number;
   barcode: number;
 }

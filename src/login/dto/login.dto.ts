@@ -8,6 +8,9 @@ export class CreateUserDto {
 
   @IsString()
   password: string;
+
+  @IsString()
+  rol: string;
 }
 
 export class UpdateUsersDto {
@@ -18,4 +21,7 @@ export class UpdateUsersDto {
   @IsString()
   @IsOptional()
   password?: string;
+
+  @IsString()
+  rol?: string;
 }
