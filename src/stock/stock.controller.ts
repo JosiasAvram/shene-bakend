@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { StockService } from './stock.service';
 import { Stock } from './stock.entity';
+import { RemoveUnitsDto } from './dto/remove-units.dto';
 
 @Controller('stock')
 export class StockController {
@@ -27,8 +28,8 @@ export class StockController {
     return this.stockService.addUnits(id, units);
   }
 
-  @Post('remove')
-  removeUnits(@Body() removeUnitsDto: { [key: string]: number }): Stock[] {
-    return this.stockService.removeUnits(removeUnitsDto);
-  }
+  // @Post('remove')
+  // removeUnits(@Body() removeUnitsDto: RemoveUnitsDto[]): Stock[] {
+  //   return this.stockService.removeUnits(removeUnitsDto);
+  // }
 }

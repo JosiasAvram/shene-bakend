@@ -20,18 +20,18 @@ export class StockService {
     return item;
   }
 
-  removeUnits(unitsToRemove: { [key: string]: number }): Stock[] {
-    Object.keys(unitsToRemove).forEach((id) => {
-      const units = unitsToRemove[id];
-      const stockItem = this.stock.find((item) => item.id === id);
-      if (stockItem) {
-        stockItem.unitsFresh -= units;
-        if (stockItem.unitsFresh < 0) {
-          stockItem.unitsFresh = 0;
-        }
-      }
-    });
+  // removeUnits(unitsToRemove: { id: string; units: number }[]): Stock[] {
+  //   unitsToRemove.forEach((item) => {
+  //     const { id, units } = item;
+  //     const stockItem = this.stock.find((stockItem) => stockItem.id === id);
+  //     if (stockItem) {
+  //       stockItem.unitsFresh -= units;
+  //       if (stockItem.unitsFresh < 0) {
+  //         stockItem.unitsFresh = 0;
+  //       }
+  //     }
+  //   });
 
-    return this.stock;
-  }
+  //   return this.stock;
+  // }
 }
